@@ -1,0 +1,8 @@
+DELIMITER //
+CREATE PROCEDURE seedoctoravailability (In user_Id int)
+BEGIN
+  SELECT *
+  FROM Appointments
+  LEFT JOIN Doctor ON Appointments.DoctorID = Doctor.DoctorID
+END //
+DELIMITER ;
