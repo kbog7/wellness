@@ -1,0 +1,8 @@
+DELIMITER $$
+CREATE PROCEDURE `viewDoctorType_procedure`(In user_Id int)
+BEGIN
+  SELECT *
+  FROM Providers
+  INNER JOIN Procedures ON Procedures.procedureType = Providers.specialty
+END$$
+DELIMITER ;
